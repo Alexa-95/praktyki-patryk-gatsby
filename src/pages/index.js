@@ -55,7 +55,7 @@ const links = [
 const IndexPage = () => {
   return (
     <main className="page">
-      <h1 className="heading">
+      <h1 className="mt-0 mb-[64px] max-w-[320px]">
         Congratulations
         <br />
         <span className="heading-accent">
