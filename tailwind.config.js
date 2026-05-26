@@ -11,6 +11,7 @@ module.exports = {
         accent: "#12F7D6",
         accentLight: "#98FAEC",
         dark: "#1A1E23",
+        gray: "#43454D",
       },
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
