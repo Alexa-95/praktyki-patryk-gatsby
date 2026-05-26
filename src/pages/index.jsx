@@ -1,6 +1,6 @@
 import * as React from "react"
 import "../styles/index.css"
-import StickyHeaderDemo from "../componets/Header"
+import Header from "../componets/Header"
 
 const docLink = {
   text: "Documentation",
@@ -56,7 +56,7 @@ const links = [
 const IndexPage = () => {
   return (
     <>
-    <StickyHeaderDemo />
+    <Header />
     <main className="page">
       <h1 className="mt-0 mb-[64px] max-w-[320px]">
         Congratulations
