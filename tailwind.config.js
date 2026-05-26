@@ -12,6 +12,10 @@ module.exports = {
         accentLight: "#98FAEC",
         dark: "#1A1E23",
       },
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+        IBMPlex: ["IBM Plex Mono", "monospace"],
+      },
     },
   },
   plugins: [],

@@ -54,9 +54,9 @@ export default function StickyHeaderDemo() {
           </div>
 
           <nav className="flex gap-4 text-sm font-medium">
-            <a href="#start" className="hover:text-blue-600">Start</a>
-            <a href="#about" className="hover:text-blue-600">O nas</a>
-            <a href="#contact" className="hover:text-blue-600">Kontakt</a>
+            <a href="#start" className="hover:text-blue-600 font-IBMPlex">Start</a>
+            <a href="#about" className="hover:text-blue-600 font-IBMPlex">O nas</a>
+            <a href="#contact" className="hover:text-blue-600 font-IBMPlex">Kontakt</a>
           </nav>
         </div>
       </header>
