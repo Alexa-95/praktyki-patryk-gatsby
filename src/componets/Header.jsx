@@ -53,7 +53,7 @@ export default function Header() {
               Patryk
             </p>
           </div>
-          <img src={hamburgerImg} />
+          <img src={hamburgerImg} alt="" width={40} height={40}/>
           <Nav />
         </div>
       </header>

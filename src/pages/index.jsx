@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../styles/index.css"
 import Header from "../componets/Header"
+import { graphql } from 'gatsby';
 
 const docLink = {
   text: "Documentation",
@@ -53,18 +54,20 @@ const links = [
   },
 ]
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <>
       <Header />
       <main className="page">
         <h1 className="mt-0 mb-[64px] max-w-[320px]">
-          Congratulations
-          <br />
-          <span className="heading-accent">
-            — you just made a Gatsby site! 🎉🎉🎉
-          </span>
+          Hello, my name is {data.sanityTitle.name}
+          <span className="block">{data.sanityTitle.title}</span>
         </h1>
+
+        <div>
+          <h2>{data.sanityAboutMe.title}</h2>
+          <p dangerouslySetInnerHTML={{ __html: data.sanityAboutMe.description }} />
+        </div>
 
         <p className="paragraph">
           Edit <code className="code">src/pages/index.js</code> to see this page
@@ -115,5 +118,19 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+    
+  query data {
+      sanityTitle {
+          name
+          title
+      }
+      sanityAboutMe {
+          title
+          description
+      }
+  }
+`;
 
 export const Head = () => <title>Home Page</title>
