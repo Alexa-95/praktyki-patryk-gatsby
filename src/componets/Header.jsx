@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import Nav from './Nav'
 import hamburgerImg from '../assets/images/NavBar.png'
+import closeImg from '../assets/images/Close.png'
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const headerRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -24,7 +27,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log('scroll')
       setIsSticky(window.scrollY > headerHeight);
     };
 
@@ -35,6 +37,23 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [headerHeight]);
+
+  function setMobileMenuState () {
+    setMobileMenuOpen(prevState => !prevState);
+
+    const body = document.body;
+
+    if (!mobileMenuOpen) {
+      body.style.overflowY = 'hidden'
+    }
+    else {
+      body.style.overflowY = 'auto'
+    }
+  }
+
+  function closeMobileMenu() {
+    setMobileMenuOpen(false);
+  }
 
   return (
     <div className="bg-mainDark text-accent">
@@ -53,8 +72,17 @@ export default function Header() {
               Patryk
             </p>
           </div>
-          <img src={hamburgerImg} alt="" width={40} height={40}/>
-          <Nav />
+          {/* Desktop Menu */}
+          <div className="hidden md:flex ">
+            <Nav type={'desktop'} />
+          </div>
+          {/* Mobile Menu */}
+          <button type="button" onClick={setMobileMenuState} className="md:hidden">
+            <span className="sr-only">Toggle mobile menu</span>
+            <img src={hamburgerImg} alt="Open mobile menu button" width={40} height={40} className={mobileMenuOpen ? 'hidden' : 'block'}/>
+            <img src={closeImg} alt="Close mobile menu button" width={40} height={40} className={mobileMenuOpen ? 'block' : 'hidden'}/>
+          </button>
+          <MobileMenu state={mobileMenuOpen} closeMobileMenu={closeMobileMenu} />
         </div>
       </header>
 
