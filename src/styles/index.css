@@ -3,7 +3,9 @@
 :root {
   font-family: "Ubuntu", Roboto, sans-serif;
 }
-
-.hero-left-container {
-  border: 1px solid white;
+.swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply bg-[#292F36] text-white p-3 rounded-full;
+  }
 }

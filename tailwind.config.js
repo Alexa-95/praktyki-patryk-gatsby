@@ -4,7 +4,7 @@ module.exports = {
     `./src/**/*.{js,jsx,ts,tsx,html}`,
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
-    `./src/section/**/*.{js,jsx,ts,tsx}`,
+    `./src/sections/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
     extend: {

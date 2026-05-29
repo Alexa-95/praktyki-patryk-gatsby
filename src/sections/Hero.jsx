@@ -21,7 +21,7 @@ export default function Hero() {
                     {emailAddress}
                   </a>
                 </span>
-                <span className="block">http://patrykruszkiewicz.pl/</span>
+                <a href="http://patrykruszkiewicz.pl/" target="_blanks" className="block">http://patrykruszkiewicz.pl/</a>
               </div>
               <div className="flex gap-4">
                 <span className="w-full text-center p-1 bg-accent text-mainDark rounded-[8px]">HTML</span>
@@ -30,7 +30,7 @@ export default function Hero() {
                 <span className="w-full text-center p-1 bg-accent text-mainDark rounded-[8px]">React</span>
               </div>
               <div className="">
-                <a href={cvFile} className="flex justify-center bg-white text-mainDark rounded-full p-2">
+                <a href={cvFile} className="flex justify-center items-end bg-white text-mainDark rounded-full p-2 gap-2">
                   Download
                   <img src={download}/>
                 </a>

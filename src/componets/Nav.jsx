@@ -27,6 +27,8 @@ export default function Nav({ type, closeMobileMenu }) {
     <nav className={`flex gap-8 text-xl font-IBMPlex ${navClasses}`}>
       <button type="button" className={`hover:underline ${linkClasses}`} onClick={handleNavButtonClick}>Start</button>
       <button type="button" className={`hover:underline ${linkClasses}`} onClick={() => handleNavButtonClick('about')}>About</button>
+      <button type="button" className={`hover:underline ${linkClasses}`} onClick={() => handleNavButtonClick('skills')}>Skills</button>
+      <button type="button" className={`hover:underline ${linkClasses}`} onClick={() => handleNavButtonClick('works')}>Works</button>
       <button type="button" className={`hover:underline ${linkClasses}`} onClick={() => handleNavButtonClick('contact')}>Contact</button>
     </nav>
   )

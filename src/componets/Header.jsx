@@ -59,7 +59,7 @@ export default function Header() {
     <div className="bg-mainDark text-accent">
       <header
         ref={headerRef}
-        className={`w-full bg-mainDark border-b border-slate-200 transition-all duration-300 text-[10px] 
+        className={`w-full bg-mainDark border-b border-slate-600 transition-all duration-300 text-[10px] 
         ${isSticky
             ? "fixed top-0 left-0 z-50 shadow-lg animate-[slideDown_0.25s_ease-out]"
             : "relative"

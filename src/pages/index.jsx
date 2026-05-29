@@ -5,6 +5,8 @@ import Hero from '../sections/Hero'
 import { graphql } from 'gatsby';
 import About from "../sections/About";
 import Skills from "../sections/Skills";
+import Works from "../sections/Works";
+import Contact from "../sections/Contact";
 
 const docLink = {
   text: "Documentation",
@@ -30,6 +32,8 @@ const IndexPage = ({ data }) => {
       </main>
       <About />
       <Skills />
+      <Works />
+      <Contact />
     </>
   )
 }
